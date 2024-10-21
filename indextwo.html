@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отель для животных - лапки и хвосты</title>
+  <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="src/img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="src/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="src/css/style.css">
+  <script src="https://kit.fontawesome.com/13f81d05ea.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+      <ul class="menu">
+         <li class="menu_item"><a href="#main" class="menu_link">Главная</a></li>
+         <li class="menu_item"><a href="#advantages" class="menu_link">Почему мы</a></li>
+         <li class="menu_item"><a href="#services" class="menu_link">Услуги</a></li>
+         <li class="menu_item"><a href="#statistics" class="menu_link">Немного цифр</a></li>
+         <li class="menu_item"><a href="#main" class="menu_link">Контакты</a></li>
+      </ul>
+      </div> 
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    </nav>
+    <div class="subheader">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-4 offset-md-1">
+            <a href="#" class="subheader_logo"><img src="src/img/logotip.png" alt="logo"></a>
+            <div class="subheader_official">Официальный партнер в Астрахани</div>
+          </div>
+          <div class="xs-hidden col-md-3 offset-md-1 col-xl-2 offset-xl-2">
+            <div class="subheader_call">Звоните нам ежедневно</div>
+            <a href="tel:+79887778877" class="subheader_phone">8 988 777 88 77</a>
+          </div>
+          <div class="col-6 col-md-3">
+            <a href="tel:+79887778877" class="xs-visible subheader_phone">8 988 777 88 77</a>
+            <button id="callButton" class="subheader_btn" onclick="makeCall()">заказать звонок</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </header>
+  <section class="promo" id="main" style="min-height: 800px; background: url(src/img/mainer.jpg) center center/cover no-repeat; padding: 150px 0 135px 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 offset-md-0 col-lg-10 offset-lg-1">
+          <h1 class="promo_header">Отель лапки и хвосты</h1>
+          <h2 class="promo_subheader">Мы гарнтируем заботу и комфорт для ваших питомцев, предоставляем специальное внимание для собак с особыми потребностями.</h2>
+          <div class="promo_descr">Выезд на дом в любое время</div>
+          <button id="submitButton" class="promo_btn">ОТПРАВИТЬ ЗАЯВКУ!</button>
+          
+          <!-- Форма заявки -->
+          <form id="requestForm" class="hidden-form">
+            <label>Порода:</label>
+            <input type="text" name="breed">
+            
+            <label>Особенности:</label>
+            <input type="text" name="features">
+            
+            <label>Возраст:</label>
+            <input type="text" name="age">
+            
+            <label>Кличка:</label>
+            <input type="text" name="name">
+            
+            <label>Здоровье:</label>
+            <input type="text" name="health">
+            
+            <label>Другое (необязательно):</label>
+            <input type="text" name="other">
+            
+            <label>Сроки пребывания:</label>
+            <input type="text" name="duration">
+            
+            <button type="submit" class="promo_btn">Отправить</button>
+          </form>
+  
+          <div id="successModal" class="modal">
+            <div class="modal-content">
+              <span id="closeModal" class="close">&times;</span>
+              <p>Форма отправлена успешно!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="advantages" id="advantages">
+    <div class="container">
+        <div class="row">
+            <article class="advantage-item col-md-4">
+                <div class="icon">
+                    <img src="src/img/dostupny-rascenki.png" alt="Доступные цены" class="icon-affordable">
+                </div>
+                <header>
+                    <h2 class="title">Доступные расценки</h2>
+                </header>
+                <p class="description">Мы предлагаем гибкие условия ценовых решений</p>
+            </article>
+            <article class="advantage-item col-md-4">
+                <div class="icon">
+                    <img src="src/img/garantiya-kachestva.png" alt="Гарантия качества" class="icon-quality">
+                </div>
+                <header>
+                    <h2 class="title">Гарантия качества</h2>
+                </header>
+                <p class="description">Гарантируется хорошее отношение к животным</p>
+            </article>
+            <article class="advantage-item col-md-4">
+                <div class="icon">
+                    <img src="src/img/predvaritelnaya-konsultaciya.png" alt="Консультация" class="icon-consultation">
+                </div>
+                <header>
+                    <h2 class="title">Предварительная консультация</h2>
+                </header>
+                <p class="description">Помогаем в выборе из спектра услуг</p>
+            </article>
+        </div>
+    </div>
+</section>
+  <section class="services" id="services">
+    <div class="container">
+      <div class="label">Немного о нашей программе</div>
+      <h2 class="title">Услуги и расценки</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="service">
+            <img src="src/img/igra.jpg" alt="игровая зона">
+            <div class="service-content">
+              <h3 class="service-title">Игровые зоны</h3>
+              <p class="service-description">Пространство с игрушками, туннелями, горками и преградами для активных игр.</p>
+              <div class="price"><strong>Включено в стоимость - 500 руб/сутки</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service">
+            <img src="src/img/progulka.jpg" alt="Прогулки на свежем воздухе">
+            <div class="service-content">
+              <h3 class="service-title">Прогулки на свежем воздухе</h3>
+              <p class="service-description">Организация регулярных прогулок для собак и кошек с персоналом.</p>
+              <div class="price"><strong>Включено в стоимость - 500 руб/сутки</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service">
+            <img src="src/img/vodnye_proceduryi.jpg" alt="Водные процедуры">
+            <div class="service-content">
+              <h3 class="service-title">Водные процедуры</h3>
+              <p class="service-description">Для питомцев любящих водные процедуры имеется бассейн</p>
+              <div class="price"><strong>Включено в стоимость - 500 руб/сутки</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service">
+            <img src="src/img/i.webp" alt="Массаж и уход">
+            <div class="service-content">
+              <h3 class="service-title">Массаж и уход</h3>
+              <p class="service-description">Специальные зоны для массажа и ухода за шерстью, чтобы питомцы могли расслабиться.</p>
+              <div class="price"><strong>Дополнительная оплата - 200 руб/сутки</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service">
+            <img src="src/img/otdyih.jpg" alt="Мягкие зоны для отдыха">
+            <div class="service-content">
+              <h3 class="service-title">Мягкие зоны для отдыха</h3>
+              <p class="service-description">Удобные лежаки и кровати, где питомцы могут отдыхать после активного дня.</p>
+              <div class="price"><strong>Включено в стоимость - 500 руб/сутки</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service">
+            <img src="src/img/trenirovki.jpg" alt="Тренировки и обучение">
+            <div class="service-content">
+              <h3 class="service-title">Тренировки и обучение</h3>
+              <p class="service-description">Индивидуальные тренировки для улучшения поведения или обучения новым командам.</p>
+              <div class="price"><strong>Дополнительная оплата - 200 руб/сутки</strong></div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+</section>
+<section class="statistics" id="statistics">
+  <header>
+    <h2>Немного цифр</h2>
+  </header>
+  <div class="statistics_content">
+    <div class="statistics_icons">
+      <div class="statistics_icon">
+        <img src="src/img/icondverone.png" alt="опыт">
+        <p><strong>Опыт работы более 10 лет</strong></p>
+      </div>
+      <div class="statistics_icon">
+        <img src="src/img/icondvertwo.png" alt="услуги">
+        <p><strong>Широкий спектр услуг</strong></p>
+      </div>
+      <div class="statistics_icon">
+        <img src="src/img/icondverthree.png" alt="хозяева">
+        <p><strong>Сотни довольных хозяев</strong></p>
+      </div>
+    </div>
+    <div class="statistics_image">
+      <img src="src/img/ustanovka-dverey.png" alt="Main Image">
+    </div>
+  </div>
+</section>
+</div>
+<footer id="footer">
+  <div class="container_4">
+    <div class="circle-container">
+      <div class="circle"><i class="fa-brands fa-facebook-f" style="color: #080808;"></i></div>
+      <div class="circle"><i class="fa-brands fa-twitter" style="color: #000000;"></i></div>
+      <div class="circle"><i class="fa-brands fa-linkedin-in" style="color: #000000;"></i></div>
+      <div class="circle"><i class="fa-brands fa-square-instagram" style="color: #000000;"></i></div>
+    </div>
+    <div class="first_center-icon">
+      <img src="src/img/icon_apple.png" alt="apple store">
+    </div>
+    <div class="second_center-icon">
+      <img src="src/img/icon_googleplay.png" alt="google play">
+    </div>
+    <div class="third_center-icon">
+      <img src="src/img/icon_windows.png" alt="galaxy store">
+    </div>
+    <div class="bottom-text">
+      <h3>
+        <a href="#main">На главную</a>
+        <a href="#services">услуги</a>
+        <a href="#statistics">немного цифр</a>
+      </h3>
+      <p class="gray-text">
+        <a href="h">Центр поддержки</a>
+        <span class="copyright">2024 Все права защищены</span>
+        <a href="h">Разработчики</a> 
+        <a href="#main">О нас</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script>
+  window.onload = function() {
+    document.getElementById('successModal').style.display = 'none';
+  };
+
+  document.getElementById('submitButton').addEventListener('click', function() {
+    const form = document.getElementById('requestForm');
+    const promoSection = document.querySelector('.promo');
+
+    form.style.display = 'block';
+
+    setTimeout(function() {
+      form.style.opacity = '1';
+      form.style.transform = 'scale(1)'; 
+
+      promoSection.classList.remove('closed');
+      promoSection.classList.add('opened');
+    }, 10);
+  });
+
+  document.getElementById('requestForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const form = document.getElementById('requestForm');
+    const promoSection = document.querySelector('.promo');
+    const modal = document.getElementById('successModal');
+
+    form.style.opacity = '0';
+    form.style.transform = 'scale(0.9)'; 
+
+    setTimeout(function() {
+      form.style.display = 'none';
+      promoSection.classList.remove('opened');
+      promoSection.classList.add('closed'); 
+
+      modal.style.display = 'flex';
+    }, 500); 
+  });
+
+  document.getElementById('closeModal').addEventListener('click', function() {
+    document.getElementById('successModal').style.display = 'none';
+  });
+</script>
+<script>
+  function makeCall() {
+      window.location.href = 'tel:+79887778877';
+  }
+  document.getElementById('callButton').addEventListener('click', makeCall);
+</script>  
+<script src="src/js/script.js"></script>
+</body>
+</html>

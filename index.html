@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация / Вход</title>
+    <link rel="stylesheet" href="src/css/styletwo.css">
+    <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="src/img/favicon.ico">
+</head>
+<body>
+    <div class="form-container">
+        <div class="registration-form-container" id="registrationFormContainer">
+            <form class="registration-form" id="registrationForm">
+                <h2>Регистрация</h2>
+                <label for="username">Логин</label>
+                <input type="text" id="regUsername" name="username" required>
+
+                <label for="password">Пароль</label>
+                <input type="password" id="regPassword" name="password" required>
+
+                <label for="fullname">ФИО</label>
+                <input type="text" id="fullname" name="fullname" required>
+
+                <label for="dob">Дата рождения</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="phone">Номер телефона</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+
+            <button class="toggle-button" id="openLoginForm">Вход</button>
+        </div>
+
+        <div class="login-form-container" id="loginFormContainer" style="display: none;">
+            <form class="login-form" id="loginForm">
+                <h2>Вход</h2>
+                <label for="loginUsername">Логин</label>
+                <input type="text" id="loginUsername" name="username" required>
+
+                <label for="loginPassword">Пароль</label>
+                <input type="password" id="loginPassword" name="password" required>
+
+                <button type="submit">Войти</button>
+            </form>
+
+            <button class="toggle-button" id="openRegistrationForm">Назад к регистрации</button>
+        </div>
+    </div>
+
+    <script src="src/js/scripttwo.js"></script>
+</body>
+</html>
